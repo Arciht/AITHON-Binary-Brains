@@ -1,73 +1,50 @@
-/* Basic reset */
-*{
-    background-color: ;
-}
-body, h1, p, ul, li {
+/* Add this to styles.css */
+
+body {
+    background-color: rgba(0, 128, 128, 1.00);
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
 }
 
-/* Navbar */
-.navbar {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-}
-.navbar .container {
+.left, .right {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
-.nav-links {
-    list-style: none;
+
+.container {
     display: flex;
-    gap: 20px;
-}
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
-    transition: background 0.3s;
-}
-.nav-links li a:hover {
-    background-color: #575757;
-    border-radius: 4px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Slideshow */
-.slideshow-container {
+.button button {
+    cursor: pointer;
+}
+
+.bitcoin-image {
     max-width: 100%;
+    height: auto;
+}
+
+.bitcoin-container {
     position: relative;
-    margin: auto;
-}
-.slides {
-    display: none;
-}
-.slides img {
-    width: 100%;
-}
-.fade {
-    animation: fade 1.5s;
-}
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+    margin-bottom: 20px;
 }
 
-/* Content */
-.content {
-    padding: 40px 20px;
-    text-align: center;
+.bitcoin-image {
+    animation: rotate 3s infinite linear;
+    
 }
 
-/* Footer */
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
