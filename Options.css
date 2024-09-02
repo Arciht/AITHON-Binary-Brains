@@ -9,6 +9,11 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.card-container {
+    display: flex;
+    gap: 20px;
+}
+
 .card {
     background: linear-gradient(135deg, #e0f7fa, #80deea);
     border-radius: 15px;
@@ -22,7 +27,9 @@ body {
     padding: 20px;
 }
 
-.bitcoin-icon {
+.bitcoin-icon,
+.news-icon,
+.home-icon {
     width: 100px;
     height: 100px;
     background: radial-gradient(circle, rgba(0, 150, 136, 1) 0%, rgba(38, 166, 154, 1) 100%);
@@ -40,7 +47,25 @@ body {
     left: 25%;
 }
 
-.price-button {
+.news-icon::before {
+    content: '📰';
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.home-icon::before {
+    content: '🏠';
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+button {
     background-color: #26a69a;
     color: white;
     border: none;
@@ -52,6 +77,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.price-button:hover {
+button:hover {
     background-color: #1e887f;
 }
